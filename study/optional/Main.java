@@ -46,7 +46,7 @@ public class Main {
         Optional<String> nonNullOptional = Optional.ofNullable(noNullValue);
         String orElse = optNullable.orElse("null 입니다.");                      // null 값 여부와 상관없이 항상 호출
         String orElseGetNull = optNullable.orElseGet(() -> "null 입니다.");            // null 일 때만 호출
-        String orElseGetNonNull = nonNullOptional.orElseGet(() -> "null이 아닙니다."); // null 이어서 출력 안됨
+        String orElseGetNonNull = nonNullOptional.orElseGet(() -> "null이 아닙니다."); // null이 아니기 때문에 출력 안됨
         //String orElseThrow = optNullable.orElseThrow(NullPointerException::new);
         System.out.println("orElse = " + orElse);
         System.out.println("orElseGetNull = " + orElseGetNull);
